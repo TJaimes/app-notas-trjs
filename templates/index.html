@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block titulo %} Página principal {% endblock %}
+
+{% block contenido %}
+<div class="hero">
+  <div class="contenido">
+    <div class="info">
+      <p class="nombre">Proyecto Aplicación de Notas</p>
+      <div class="descripcion">TECNOLÓGICO NACIONAL DE MÉXICO CAMPUS COLIMA</div>
+      <div class="descripcion">Servicios en la Nube</div>
+      <div class="descripcion">Tairi Raquel Jaimes Salazar</div>
+      <button>
+        <a href="/acercademi">Acerca de mí</a>
+      </button>
+    </div>
+    <div class="imagen">
+      <img src="{{ url_for('static', filename='img/logoo.png') }}" alt="Logo">
+    </div>
+  </div>
+</div>
+{% endblock %}

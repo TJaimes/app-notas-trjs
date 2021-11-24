@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block titulo %} About {% endblock %}
+
+
+{% block encabezado %}
+<header>
+    <div class="contenido">
+      <a href="#">
+        <div class="imagen">
+        <img src="{{ url_for('static', filename='img/logoo.png') }}" alt="Logo">
+      </div>
+      </a>
+      <a heref="#">About</a>
+    </div>
+  </header>
+{% endblock %}
+
+{% block contenido %}
+<center>
+ <p>Te encuentras en la página About</p>
+ <p>Segunda prueba</p>
+</div>
+</center>
+{% endblock %}

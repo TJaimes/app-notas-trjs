@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block titulo %} Modificar Nota {% endblock %}
+
+{% block encabezado %}
+<header>
+  <div class="contenido">
+    <a href="#">
+      <div class="imagen">
+      <img src="{{ url_for('static', filename='img/logoo.png') }}" alt="Logo">
+    </div>
+    </a>
+    <a heref="#">Modificación de la Nota</a>
+  </div>
+</header>
+{% endblock %}
+
+{% block contenido %}
+<p>{{nota}}</p>
+<form action="/modificarnota" method="post">
+  <label for="titulo">Titulo de la Nota:</label><br>
+  <input typo="text" name="campotitulo" value="{{nota.tituloNota}}">
+  <br>
+  <label for="cuerpo">Cuerpo de la Nota:</label><br>
+  <input type="text" name="campocuerpo" value="{{nota.cuerpoNota}}">
+  <input type="hidden" name="idnota" value="{{nota.idNota}}">
+  <input type="submit" value="Modificar Nota">
+</form>
+{% endblock %}

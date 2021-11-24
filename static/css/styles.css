@@ -1,0 +1,151 @@
+html{
+    box-sizing: border-box;
+}
+*::before,*::after, *{
+    box-sizing: inherit;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-image: url("../img/fondo.png");
+}
+header a{
+    color:black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    font-family: 'Staatliches', cursive;
+    align-items: center;
+}
+header .contenido img{
+    width: 30%;
+    border-radius: 10000px;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/fondo.png");
+    z-index: -1;
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.7) contrast(110%);
+    background-attachment: fixed;
+}
+.contenido{
+    width: 80%;
+    display: flex;
+    color: white;
+}
+.contenido .info{
+    width: 70%;
+}
+.info .nombre{
+    font-size: 4.5rem;
+    font-family: 'Staatliches', cursive;
+}
+
+.info .descripcion{
+    font-size: 1.5rem;
+    padding-right: 50px;
+    margin-bottom: 20px;
+}
+
+.info button{
+    outline: none;
+    background: none;
+    border: 1px solid white;
+    font-size: 1rem;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.info button:hover{
+    background-color: white;
+}
+
+.info button:hover a{
+    color: black;
+}
+
+.info button a{
+    color: white;
+    text-decoration: none;
+}
+
+.contenido .imagen{
+    width: 30%;
+}
+
+.contenido .imagen img{
+    width: 100%;
+    border-radius: 10000px;
+}
+
+
+
+footer{
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #4b4c4d;
+    margin-bottom: 5px;
+}
+footer .social_networks{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+footer .social_networks a{
+    border: 1px solid #787879;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition-duration: 300ms;
+}
+footer .social_networks a:hover{
+    transform: scale(1.2);
+}
+
+footer .links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+footer .links a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    color: #aaa;
+}

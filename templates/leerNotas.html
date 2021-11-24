@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block titulo %} Leer Notas {% endblock %}
+
+{% block encabezado %}
+<title>Aplicación de Notas</title>
+<meta charset="UFT-8">
+{% endblock %}
+
+{% block contenido %}
+<header>
+  <div class="contenido">
+    <a href="#">
+      <div class="imagen">
+      <img src="{{ url_for('static', filename='img/logoo.png') }}" alt="Logo">
+    </div>
+    </a>
+    <a heref="#">Aplicación de Notas</a>
+  </div>
+</header>
+
+<form action="/crearnota" method="post">
+    <label for="titulo">Título de la Nota:</label><br>
+    <input type="text" id="campotitulo" name="campotitulo" value="">
+    <br>
+    <label for="cuerpo">Cuerpo de la Nota:</label><br>
+    <input type="text" id="campocuerpo" name="campocuerpo" value="">
+    <input type="submit" value="Crear Nota">
+  </form>
+  
+  <p>
+    {{titulo}}
+    {{cuerpo}}
+  </p>
+  
+  <table style="width:100%">
+    <tr>
+      <td>{{titulo}}</td>
+      <td>{{cuerpo}}</td>
+    </tr>
+  </table>
+  <br>
+
+<h2> Listado de Notas</h2>
+<p>{{consulta}}</p>
+<table>
+    {% for nota in consulta %}
+    <tr>
+        <td>{{nota.tituloNota}}</td>
+        <td>{{nota.cuerpoNota}}</td>
+        <td><a href="/eliminarnota/{{nota.idNota}}">Eliminar</a></td>
+        <td><a href="/editarnota/{{nota.idNota}}">Editar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

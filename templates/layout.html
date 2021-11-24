@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+  {% block head %}
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block titulo %} {% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  {% endblock %}
+
+  {% block body %}
+  <body>
+    {% block encabezado %}
+    {% endblock %}
+
+    {% block contenido %}
+    {% endblock %}
+    
+    {% block pie %}
+    <footer>
+      <div class="social_networks">
+        <a href="#" class="item">
+          <box-icon name="facebook" type="logo"></box-icon>
+        </a>
+        <a href="#" class="item">
+          <box-icon name="instagram" type="logo"></box-icon>
+        </a>
+        <a href="#" class="item">
+          <box-icon name="twitter" type="logo"></box-icon>
+        </a>
+      </div>
+      <div class="links">
+        <a href="http://127.0.0.1:5000/">Inicio</a>
+        <a href="/about">About</a>
+        <a href="/leernotas">Notas</a>
+      </div>
+      <div class="copyright">© 2021 Tairi Jaimes.</div>
+    </footer>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    {% endblock %}
+  </body>
+
+  {% endblock %}
+  </html>

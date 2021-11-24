@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block titulo %} Acerca de mí {% endblock %}
+
+{% block contenido %}
+<div class="hero">
+  <div class="contenido">
+    <div class="info">
+      <p class="nombre">Acerca de mí</p>
+      <div class="descripcion">Nombre: Tairi Raquel Jaimes Salazar</div>
+      <div class="descripcion">No. Control: 18460610</div>
+      <div class="descripcion">Carrera: Ingeniería en Sistemas Computacionales</div>
+      <div class="descripcion">Séptimo Semestre</div>
+    </div>
+    <div class="imagen">
+      <img src="{{ url_for('static', filename='img/logoo.png') }}" alt="Logo">
+    </div>
+  </div>
+</div>
+{% endblock %}
